@@ -40,7 +40,7 @@ const Sidebar = () => {
 
   return (
     <>
-      <aside className="bg-green-800 text-white p-6 lg:fixed lg:h-full lg:w-64 w-full">
+      <aside className="bg-green-800 text-white p-10 lg:fixed lg:h-full lg:w-64 w-full">
         <img
           src="./images/csu.png"
           alt="csu-logo"
@@ -94,7 +94,7 @@ const Sidebar = () => {
           </ul>
           <button
             onClick={() => openModal()}
-            className="hidden lg:flex items-center text-sm hover:bg-green-700 rounded p-2"
+            className="hidden lg:flex items-center text-sm hover:bg-green-700 rounded p-2 mt-8"
           >
             <span className="mr-2">
               <RiLogoutBoxRFill size={18} />

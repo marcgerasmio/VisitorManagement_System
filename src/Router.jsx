@@ -12,7 +12,7 @@ import Notifications from './components/Notifications.jsx';
 function Router() {
   return (
     <Routes>
-      <Route index element={<LandingPage />} />
+      <Route path='/' element={<LandingPage />} />
       <Route path="/registration" element={<VisitorReg />} />
       <Route path="/login" element={<Login />} />
       <Route path="/dashboard" element={<Dashboard />} />

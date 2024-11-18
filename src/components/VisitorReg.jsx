@@ -5,6 +5,8 @@ import { FaPeopleGroup } from "react-icons/fa6";
 import { MdContactPhone, MdOutlineConfirmationNumber } from 'react-icons/md';
 import supabase from '../supabaseClient';
 import QRCode from 'qrcode';
+import { FiHome } from "react-icons/fi";
+import { NavLink } from 'react-router-dom';
 
 const VisitorReg = () => {
   const [file, setFile] = useState('');
@@ -27,7 +29,7 @@ const VisitorReg = () => {
 
   const [isLoading, setIsLoading] = useState(false);
   const [qrcode, setQrCode] = useState('');
-  const [visitorType, setVisitorType] = useState('');
+  const [visitorType, setVisitorType] = useState('Organization');
 
   const insertVisitorData = async (e) => {
     e.preventDefault();
@@ -259,15 +261,14 @@ const VisitorReg = () => {
       <div className="flex items-center justify-center min-h-screen bg-green-900 font-mono px-4 sm:px-0">
         <div className="w-full sm:w-3/4 lg:w-2/5 p-5 bg-white rounded-lg">
         <div className='flex flex-col sm:flex-row gap-4'>
-        <h1 className="text-xl sm:text-2xl font-bold mb-6 text-cente flex-1">
+         <NavLink to="/">
+         <button className='btn'><FiHome size={20} /></button>
+         </NavLink>
+        <h1 className="text-xl sm:text-2xl font-bold mb-6 text-cente flex-1 mt-2">
             Visitor Registration
           </h1>
           <select className="select select-bordered " onChange={(e) => setVisitorType(e.target.value)}
          >
-              <option disabled selected>
-                Type of Visitor
-              </option>
-              <option>Family</option>
               <option>Organization</option>
               <option>VIP</option>
               <option>Others</option>

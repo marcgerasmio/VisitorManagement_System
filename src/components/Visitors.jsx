@@ -75,7 +75,6 @@ const Visitors = () => {
               onChange={(e) => setVisitorType(e.target.value)}
             >
               <option>Type of Visitor</option>
-              <option>Family</option>
               <option>Organization</option>
               <option>VIP</option>
               <option>Others</option>
